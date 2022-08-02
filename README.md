@@ -68,3 +68,34 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+NYT Reader 
+
+## Technologies
+React | React Router
+Cypress
+Javascript
+HTML
+CSS
+
+## Set Up Instructions
+
+### Running it Locally
+Clone this repo to your local machine
+cd into nyt-reader
+Then, run npm install from your command line. Do not run npm audit fix --force
+After you run npm install inside of your copy of this repo, run: npm start This command runs the app in the development mode locally so that you can view and use the application in your browser.
+You can now view nyt-reader in the browser.
+  Local:  http://localhost:3000
+When you are done exploring NYT Reader make sure that you type Control + C in your terminal to stop the server before closing your Terminal.
+
+#### Contributors
+Angele Williams
+
+#### Acknowledgments
+Turing Scool of Software & Design
+
+Planning Resources
+Project Spec
+MVP Planning
+figma: https://www.figma.com/file/VT0RYEjUdhh0hYPA40BSVv/Wireframes?node-id=0%3A1 
