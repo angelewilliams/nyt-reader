@@ -1,9 +1,9 @@
 import React from "react";
 import ArticleCard from "../ArticleCard/ArticleCard";
-import { placeholderList } from "../../Assets/sections";
+import { placeholderData } from "../../Assets/data";
 
 const Articles = ({ articles }) => {
-    const articleCards = placeholderList.map((article) => {
+    const articleCards = articles.map((article) => {
         return <ArticleCard content={article} />
     })
 
