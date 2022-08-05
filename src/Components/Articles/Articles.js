@@ -3,11 +3,12 @@ import './Articles.css'
 import ArticleCard from "../ArticleCard/ArticleCard";
 import { placeholderData } from "../../Assets/data";
 
-const Articles = ({ articles }) => {
+const Articles = ({ articles, currentArticle, setCurrentArticle }) => {
 
     const articleCards = articles.map((article) => {
-        let keyId = article.uri.slice(14)
-        return <ArticleCard content={article} key={keyId} id={keyId} />
+        let keyId = article.short_url.slice(-7)
+        return <ArticleCard
+            article={article} key={keyId} id={keyId} setCurrentArticle={setCurrentArticle} />
     })
 
     return (

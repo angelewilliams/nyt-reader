@@ -3,6 +3,7 @@ import logo from '../../logo.png';
 import './App.css';
 import Nav from '../Nav/Nav';
 import Articles from '../Articles/Articles';
+import ArticleDetail from '../ArticleDetail/ArticleDetail';
 import fetchData from '../../apiCalls';
 import { placeholderData } from '../../Assets/data';
 import LoadingSpinner from '../Loading/LoadingSpinner';
@@ -12,59 +13,59 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [articles, setArticles] = useState([]);
-  const [sectionTag, setSectionTag] = useState('arts');
-  // const [categoryText, setCategoryText] = useState('home');
+  const [sectionTag, setSectionTag] = useState('home');
   const [currentArticle, setCurrentArticle] = useState({});
 
 
   const handleFetch = () => {
     setIsLoading(true);
     fetchData(sectionTag)
-      .then(data => { 
-         setArticles(data.results)
-         setIsLoading(false)
+      .then(data => {
+        console.log(data.results)
+        setArticles(data.results)
+        setIsLoading(false)
 
-       })
+      })
       .catch(err => {
         console.error(err);
-         setIsLoading(false)
+        setIsLoading(false)
       });
   }
 
 
 
   useEffect(() => {
-    handleFetch()
+    // handleFetch()
     // setIsLoading(true)
-    // setTopStories(placeholderData)
+    setArticles(placeholderData)
 
   }, []);
 
   return (
     <div className="App">
-      <Nav sectionTag={sectionTag} setSectionTag={setSectionTag}/>
+      <Nav sectionTag={sectionTag} setSectionTag={setSectionTag} />
       <Switch>
-        <Rout
+        <Route
           exact path="/nyt-reader/"
           render={() =>
             <main>
-              {isLoading ? <LoadingSpinner /> : <Articles articles={articles} />}
+              {isLoading ? <LoadingSpinner /> : <Articles articles={articles} currentArticle={currentArticle} setCurrentArticle={setCurrentArticle} />}
             </main>
           }
         />
-        {/* <Route
+        {/* Need to display   */}
+        <Route
           exact path="/nyt-reader/:article"
           render={({ match }) => {
             const article = parseInt(match.params.article)
-            return <Articles articles={article} />
+            return (
+              <div>
+                <ArticleDetail currentArticle={currentArticle} />
+                <p>djkldsajkla</p>
+              </div>)
           }}
-        /> */}
-
-        <Route
-          exact path="/nyt-reader/spinner"
-          render={() => <img src={logo} className="App-logo" alt="logo" />
-          }
         />
+
         <Route
           exact path="/nyt-reader/spinner"
           render={() => <img src={logo} className="App-logo" alt="logo" />
@@ -83,3 +84,7 @@ const App = () => {
 }
 
 export default App;
+
+
+
+  // const [categoryText, setCategoryText] = useState('home');

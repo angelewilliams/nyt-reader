@@ -1,17 +1,16 @@
 import React from "react";
 
 
-const ArticleDetail = ({ article }) => {
-
+const ArticleDetail = ({ currentArticle }) => {
+    console.log(currentArticle)
     return (
         <div className="article-detail">
-            <p className="section-tag">{article.section}</p>
-            <p className="subsection-tag">{article.subsection}</p>
-            <h2 className="title">{article.subsection}</h2>
-            <h4>{article.abstract}</h4>
-            <h5>{article.byline}</h5>
-            <a href={article.url}>Link to full article on NYTimes.com</a>
-            <img src={article.multimedia[0].url} alt={article.multimedia[0].caption} />
+            <p className="section-tag">{currentArticle.section}</p>
+            <h2 className="title">{currentArticle.subsection}</h2>
+            <h4>{currentArticle.abstract}</h4>
+            <h5>{currentArticle.byline}</h5>
+            <a href={currentArticle.url} target="_blank">Link to full currentArticle on NYTimes.com</a>
+            <img src={currentArticle.multimedia[0].url} alt={currentArticle.multimedia[0].caption} />
         </div>
     )
 }

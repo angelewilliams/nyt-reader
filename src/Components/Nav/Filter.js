@@ -2,10 +2,10 @@ import React from "react";
 import { sections } from "../../Assets/data";
 import fetchData from "../../apiCalls";
 
-const Filter = () => {
+const Filter = ({ sectionTag, setSectionTag }) => {
     const handleSelect = (e) => {
         console.log('selected: ', e.target.value)
-        // fetchData(e.target.value)
+        setSectionTag(e.target.value)
     }
     let sectionOptions = sections.map(section => {
         let capitalized = section.charAt(0).toUpperCase() + section.slice(1)
@@ -13,10 +13,10 @@ const Filter = () => {
 
     })
     return (
-        <div className="cat-filter-section">
+        <div className="article-filter">
             <select
-                title="Filter By Affection Level"
-                className="affection-level-dropdown"
+                title="Filter By Section"
+                className="section-dropdown"
                 onChange={handleSelect}
                 data-cy="filter-select"
             >
