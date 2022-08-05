@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# NYT Article Reader
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Table of Contents
 
-## Available Scripts
+  - [Introduction](#introduction)
+  - [Technologies](#technologies)
+  - [Features](#features)
+  - [Possible Future Extensions](#possible-future-extensions)
+  - [Set Up](#set-up)
+  - [Contributors](#contributors)
+  - [Additional Resources](#additional-resources)
 
-In the project directory, you can run:
+## Introduction
+This React application was built as a take home challenge and utilizes the NYT Top Stories API. Developers were given an 8-hour time frame to meet an MVP, but all other decisions were to be made by them.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies
+  - React | React Router
+  - JSX/HTML
+  - CSS
+  - Cypress
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
+- On load, a user sees the home page of articles and thumbnails
+- They can select another section of NYTimes Top articles 
+- From there, they can click on an article for more details
 
-### `npm test`
+## Future Extensions
+- Adding additional testing for all sad paths
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Set Up
+1. Clone this repo to your local machine.
+2. `cd` into the directory once cloned.
+3. Run `npm start` to view the application in your browser.
+4. Enjoy exploring new articles!
 
-### `npm run build`
+## Contributors
+- [Angele Williams](https://github.com/users/angelewilliams/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Additional Resources
+- [Wireframe](https://www.figma.com/file/VT0RYEjUdhh0hYPA40BSVv/Wireframes)
+- [Project Board](https://github.com/users/angelewilliams/projects/2)
+- [Project Spec](https://mod4.turing.edu/projects/take_home/take_home_fe)
+- [Rubric](https://mod4.turing.edu/projects/take_home/take_home_rubric)
+- [Top Stories API](https://developer.nytimes.com/docs/top-stories-product/1/overview)

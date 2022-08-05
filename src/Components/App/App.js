@@ -13,7 +13,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [articles, setArticles] = useState([]);
-  const [sectionTag, setSectionTag] = useState('home');
+  const [sectionTag, setSectionTag] = useState('arts');
   const [currentArticle, setCurrentArticle] = useState({});
 
 
@@ -35,15 +35,15 @@ const App = () => {
 
 
   useEffect(() => {
-    // handleFetch()
+    handleFetch()
     // setIsLoading(true)
-    setArticles(placeholderData)
+    // setArticles(placeholderData)
 
-  }, []);
+  }, [sectionTag]);
 
   return (
     <div className="App">
-      <Nav sectionTag={sectionTag} setSectionTag={setSectionTag} />
+      <Nav setArticles={setArticles} setSectionTag={setSectionTag} setIsLoading={setIsLoading} />
       <Switch>
         <Route
           exact path="/nyt-reader/"
@@ -61,8 +61,7 @@ const App = () => {
             return (
               <div>
                 <ArticleDetail currentArticle={currentArticle} />
-                <p>djkldsajkla</p>
-              </div>)
+\              </div>)
           }}
         />
 
